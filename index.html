@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI 應用規劃師（初級）</title>
+    <style>
+      :root {
+        --ink: #17212b;
+        --muted: #5f6b77;
+        --paper: #f6f7f3;
+        --panel: #ffffff;
+        --line: #dce3e8;
+        --teal: #0f766e;
+        --navy: #243b53;
+        --coral: #c05621;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, rgba(15, 118, 110, 0.08), transparent 42%),
+          var(--paper);
+        font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+      }
+
+      .home-shell {
+        width: min(1120px, calc(100% - 36px));
+        margin: 0 auto;
+        padding: 54px 0 42px;
+      }
+
+      .home-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 260px;
+        gap: 34px;
+        align-items: center;
+        min-height: 430px;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--teal);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 0;
+        color: var(--navy);
+        font-size: clamp(38px, 6vw, 72px);
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .home-lead {
+        max-width: 680px;
+        margin: 22px 0 0;
+        color: #344454;
+        font-size: 20px;
+        line-height: 1.75;
+      }
+
+      .home-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .home-primary,
+      .home-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        border-radius: 8px;
+        padding: 0 18px;
+        font-weight: 850;
+        text-decoration: none;
+      }
+
+      .home-primary {
+        background: var(--teal);
+        color: #fff;
+      }
+
+      .home-secondary {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        color: var(--navy);
+      }
+
+      .home-mark {
+        display: grid;
+        place-items: center;
+        width: 230px;
+        height: 230px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        box-shadow: 0 24px 50px rgba(23, 33, 43, 0.12);
+      }
+
+      .home-mark span {
+        display: grid;
+        place-items: center;
+        width: 138px;
+        height: 138px;
+        border-radius: 50%;
+        background: #e7f5f2;
+        color: var(--teal);
+        font-size: 48px;
+        font-weight: 900;
+      }
+
+      .home-stats,
+      .home-subjects {
+        display: grid;
+        gap: 14px;
+      }
+
+      .home-stats {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .stat,
+      .home-subject {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 20px;
+      }
+
+      .stat strong {
+        display: block;
+        color: var(--navy);
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      .stat span {
+        display: block;
+        margin-top: 10px;
+        color: var(--muted);
+        font-weight: 750;
+      }
+
+      .home-subjects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 18px;
+      }
+
+      .home-subject {
+        min-height: 126px;
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .home-subject span {
+        display: block;
+        color: var(--coral);
+        font-size: 13px;
+        font-weight: 850;
+      }
+
+      .home-subject strong {
+        display: block;
+        margin-top: 10px;
+        color: var(--navy);
+        font-size: 22px;
+        line-height: 1.35;
+      }
+
+      .note {
+        margin: 22px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      @media (max-width: 860px) {
+        .home-hero,
+        .home-subjects {
+          grid-template-columns: 1fr;
+        }
+
+        .home-hero {
+          min-height: auto;
+          padding-bottom: 34px;
+        }
+
+        .home-stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 560px) {
+        .home-shell {
+          width: min(100% - 28px, 1120px);
+          padding-top: 34px;
+        }
+
+        h1 {
+          font-size: 38px;
+        }
+
+        .home-lead {
+          font-size: 17px;
+        }
+
+        .home-stats {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="home-shell">
+      <section class="home-hero">
+        <div>
+          <p class="eyebrow">AI 應用規劃師 初級</p>
+          <h1>學習指引整理與練習題庫</h1>
+          <p class="home-lead">科目一人工智慧基礎概論、科目二生成式 AI 應用與規劃，含學習指引題庫、歷屆試題與題庫練習。</p>
+          <div class="home-actions">
+            <a class="home-primary" href="files-mentioned-by-the-user-ai/index.html">開始學習</a>
+            <a class="home-secondary" href="files-mentioned-by-the-user-ai/index.html#quiz">進入題庫</a>
+            <a class="home-secondary" href="files-mentioned-by-the-user-ai/index.html#practice">題庫練習</a>
+          </div>
+        </div>
+        <div class="home-mark" aria-hidden="true">
+          <span>AI</span>
+        </div>
+      </section>
+
+      <section class="home-stats" aria-label="內容統計">
+        <div class="stat">
+          <strong>2</strong>
+          <span>科目</span>
+        </div>
+        <div class="stat">
+          <strong>133</strong>
+          <span>頁內容</span>
+        </div>
+        <div class="stat">
+          <strong>569</strong>
+          <span>總題數</span>
+        </div>
+        <div class="stat">
+          <strong>4</strong>
+          <span>歷屆試卷</span>
+        </div>
+      </section>
+
+      <section class="home-subjects" aria-label="科目">
+        <a href="files-mentioned-by-the-user-ai/index.html" class="home-subject">
+          <span>科目一</span>
+          <strong>人工智慧基礎概論</strong>
+        </a>
+        <a href="files-mentioned-by-the-user-ai/index.html" class="home-subject">
+          <span>科目二</span>
+          <strong>生成式 AI 應用與規劃</strong>
+        </a>
+      </section>
+
+      <p class="note">此首頁需放在 GitHub repo 根目錄，學習網站資料夾需放在同層的 files-mentioned-by-the-user-ai/。</p>
+    </main>
+  </body>
+</html>

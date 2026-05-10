@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI 應用規劃師（初級）學習網站</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="content-data.js"></script>
+    <script src="practice-bank.js"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <img class="brand-visual" src="assets/learning-map.svg" alt="" />
+          <div>
+            <p class="eyebrow">AI 應用規劃師 初級</p>
+            <h1>學習整理</h1>
+          </div>
+        </div>
+
+        <div class="stat-grid" id="statGrid"></div>
+
+        <div class="subject-switch" id="subjectNav" aria-label="科目"></div>
+
+        <div class="side-section">
+          <div class="side-title">章節</div>
+          <nav class="section-nav" id="sectionNav" aria-label="章節清單"></nav>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="search-wrap">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" placeholder="搜尋內容、題目" autocomplete="off" />
+          </div>
+          <div class="view-tabs" id="viewTabs" aria-label="檢視模式">
+            <button type="button" data-view="full">內容</button>
+            <button type="button" data-view="quiz">答題</button>
+            <button type="button" data-view="past">歷屆試題</button>
+            <button type="button" data-view="practice">題庫練習</button>
+            <button type="button" data-view="search">搜尋</button>
+          </div>
+        </header>
+
+        <section id="mainContent" class="content-area" aria-live="polite"></section>
+      </main>
+    </div>
+  </body>
+</html>
